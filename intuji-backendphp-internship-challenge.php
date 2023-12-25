@@ -14,10 +14,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 class IntujiPractical_JohnTest_GoogleCalendarIntegration {
 
-   // const CLIENT_ID     = '355500750351-t45tluoc09qufc9mr4cllbbmdjp1md9f.apps.googleusercontent.com';
-   // const CLIENT_SECRET = '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';
-   // const REDIRECT_URI  = 'http://localhost/testproject/sample-page/';
-
     protected $client;
 
     public function __construct() {
