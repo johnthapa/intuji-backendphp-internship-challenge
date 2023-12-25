@@ -125,11 +125,11 @@ class IntujiPractical_JohnTest_GoogleCalendarIntegration {
                 </div>';
             } else {
                echo '<div>
-                       <button id="create-event" class="btn btn-outline-success mr-2">Create Event</button>
+                       <button id="intujiJTGC-create-event" class="btn btn-outline-success mr-2">Create Event</button>
                        <button id="intujiJTGC-disconnect-ac" class="btn btn-outline-danger">Disconnect Account</button>
                        <div id="google-calendar-events" class="list-event mt-3">
                            <div class="loading-overlay"></div>
-                           <div id="google-calendar-events-container">
+                           <div id="intujiJTGC-google-calendar-events-container">
                                ' . $this->intujiP_JT_listEventAjax() . '
                            </div>
                        </div>
@@ -181,7 +181,7 @@ class IntujiPractical_JohnTest_GoogleCalendarIntegration {
                     $output .= '<strong>Start Date:</strong> ' . $start . '<br>';
                     $output .= '<strong>End Date:</strong> ' . $end . '<br>';
                     
-                    $output .= '<button type="button" class="delete-event btn btn-sm btn-outline-danger float-right" data-eventid='.$event->id.'>Delete</button>';
+                    $output .= '<button type="button" class="intujiJTGC-delete-event btn btn-sm btn-outline-danger float-right" data-eventid='.$event->id.'>Delete</button>';
                     $output .= '</li>';
                 }
                 $output .= '</ul>';

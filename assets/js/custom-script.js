@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 	// ---------------------------
 	// Create event ajax call
 	// ----------------------------
-	$("#create-event").on('click', function(){
+	$("#intujiJTGC-create-event").on('click', function(){
 	    $.confirm({
 	    	columnClass: 'col-md-6 col-md-offset-3',
 	        title: '<i class="nav-icon fas fa-info-circle"></i> Create Event',
@@ -79,7 +79,7 @@ jQuery(document).ready(function($){
 	                        		     action: 'list_event',
 	                        		    },			                
 	                        		    success: function(result){
-	                        		      $("#google-calendar-events-container").html(result.data);
+	                        		      $("#intujiJTGC-google-calendar-events-container").html(result.data);
 	                        		      $.confirm({
 	                        		          title: '<i class="nav-icon fas fa-info-circle"></i>Success',
 	                        		          content: "Event sucessfully created",
@@ -142,7 +142,7 @@ jQuery(document).ready(function($){
 	// ------------------------------
 	// Delete event ajax call
 	// ------------------------------
-	$(".delete-event").on('click', function(){
+	$(".intujiJTGC-delete-event").on('click', function(){
 		var clickedItem = $(this);
 		$.confirm({
 		    title: '<i class="nav-icon fas fa-info-circle"></i> Delete',
