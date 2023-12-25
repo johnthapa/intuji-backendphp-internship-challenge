@@ -21,15 +21,23 @@ jQuery(document).ready(function($){
 	                '<label for="event-description">Event Description:</label>' +
 	                '<input type="text" class="form-control" id="event-description" name="event-description">' +
 	            '</div>' +
-	            
+
+	            '<div class="row">' +
+
+	            '<div class="col-sm-6">' +	            
 	            '<div class="form-group">' +
 	                '<label for="event-start">Event Start:</label>' +
 	                '<input type="datetime-local" class="form-control" id="event-start" name="event-start" required>' +
 	            '</div>' +
-	            
+	            '</div>' +
+
+	            '<div class="col-sm-6">' +	
 	            '<div class="form-group">' +
 	                '<label for="event-end">Event End:</label>' +
 	                '<input type="datetime-local" class="form-control" id="event-end" name="event-end" required>' +
+	            '</div>' +
+	            '</div>' +
+
 	            '</div>' +
 	            
 	            '</form>',

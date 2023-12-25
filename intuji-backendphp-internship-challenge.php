@@ -164,7 +164,25 @@ class IntujiPractical_JohnTest_GoogleCalendarIntegration {
                 $output = '<div class="list-group">';
                 foreach ($events as $event) {
                     $start = $event->start->dateTime ?? $event->start->date;
-                    $output .= '<li id="elem-'.$event->id.'" class="list-group-item list-group-item-action">' . $event->summary . ' (' . $start . ') <button type="button" class="delete-event btn btn-sm btn-outline-danger float-right" data-eventid='.$event->id.'>Delete</button></li>';
+                    $end = $event->end->dateTime ?? $event->end->date;
+
+                    $output .= '<li id="elem-'.$event->id.'" class="list-group-item list-group-item-action">';
+
+                    $output .= '<strong>Summary:</strong> ' . $event->summary . '<br>';
+                    
+                    if (isset($event->location)) {
+                        $output .= '<strong>Location:</strong> ' . $event->location . '<br>';
+                    }
+
+                    if (isset($event->description)) {
+                        $output .= '<strong>Description:</strong> ' . $event->description . '<br>';
+                    }
+
+                    $output .= '<strong>Start Date:</strong> ' . $start . '<br>';
+                    $output .= '<strong>End Date:</strong> ' . $end . '<br>';
+                    
+                    $output .= '<button type="button" class="delete-event btn btn-sm btn-outline-danger float-right" data-eventid='.$event->id.'>Delete</button>';
+                    $output .= '</li>';
                 }
                 $output .= '</ul>';
                 $response = $output;
