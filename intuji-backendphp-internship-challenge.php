@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Intuji Practical John Test Google Calendar Integration
+ * Plugin Name: intuji-backendphp-internship-challenge
  * Description: A WordPress plugin to integrate Google Calendar for listing, creating, and deleting events.
  * Version: 1.0
  * Author: John Thapa
@@ -45,7 +45,7 @@ class IntujiPractical_JohnTest_GoogleCalendarIntegration {
     //----------------------------------------------
     private function intujiP_JT_setupActions() {
         add_action('init', array($this, 'intujiP_JT_handleOAuthCallback'));
-        add_shortcode('google_calendar', array($this, 'intujiP_JT_calendar_shortcode'));
+        add_shortcode('intuji_BPIC_google_calendar', array($this, 'intujiP_JT_calendar_shortcode'));
         // list events ajax
         add_action('wp_ajax_list_event', array($this, 'intujiP_JT_listEventAjax'));
         add_action('wp_ajax_nopriv_list_event', array($this, 'intujiP_JT_listEventAjax'));
@@ -309,7 +309,7 @@ function intujiP_JT_settings_page() {
     // Display the settings form
     ?>
     <div class="wrap">
-        <h1 class="wp-heading-inline">Intuji John Test GC Settings</h1>
+        <h1 class="wp-heading-inline">intuji backendphp internship challenge settings</h1>
         <form method="post" action="">
             <table class="form-table">
                 <tr>
